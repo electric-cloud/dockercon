@@ -5,10 +5,11 @@ Team members:
 * Siddhartha Gupta `@Siddhartha_90`
 * Tanay Nagjee `@tanayciousd`
 
-docker - Contains the base Jetty Docker container to which web applications are published.
-install - Installation scripts to set up Docker, Jenkins, ElectricCommander, Nginx.
-jpetstore - Demo web application, cloned from https://github.com/mybatis/jpetstore-6.
-orchestration - Scripts and exports used to orchestrate the preflight & CD pipelines.
+Layout:
+* docker - Contains the base Jetty Docker container to which web applications are published.
+* install - Installation scripts to set up Docker, Jenkins, ElectricCommander, Nginx.
+* jpetstore - Demo web application, cloned from https://github.com/mybatis/jpetstore-6.
+* orchestration - Scripts and exports used to orchestrate the preflight & CD pipelines.
 
 Helpful references:
 * Install latest stable Nginx on ubuntu: https://www.digitalocean.com/community/articles/how-to-install-the-latest-version-of-nginx-on-ubuntu-12-10
