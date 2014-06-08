@@ -39,3 +39,12 @@ docker run -d -p 4001:4001 -p 7001:7001 coreos/etcd
 # Make directories for confd
 sudo mkdir -p /etc/confd/conf.d
 sudo mkdir -p /etc/confd/templates
+
+touch /etc/confd/templates/ecdemo-nginx.tmpl
+touch /etc/confd/conf.d/ecdemo-nginx.toml
+
+
+# Set a key, value in etcdctl
+# etcdctl set ecdemo/upstream 8080
+
+
