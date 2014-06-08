@@ -32,7 +32,7 @@
 <div id="Logo">
 <div id="LogoContent"><stripes:link
 	beanclass="org.mybatis.jpetstore.web.actions.CatalogActionBean">
-	<img src="../images/logo-topbar.gif" />
+	<img src="../images/docker.jpg" width="80px" />
 </stripes:link></div>
 </div>
 
