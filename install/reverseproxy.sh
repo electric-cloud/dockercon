@@ -19,3 +19,9 @@ sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:nginx/stable -y
 sudo apt-get update -y
 sudo apt-get install nginx -y
+
+# Install confd
+
+wget -O confd_0.3.0_linux_amd64.tar.gz https://github.com/kelseyhightower/confd/releases/download/v0.3.0/confd_0.3.0_linux_amd64.tar.gz
+tar -zxvf confd_0.3.0_linux_amd64.tar.gz
+sudo mv confd /usr/local/bin/confd
