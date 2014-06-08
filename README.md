@@ -1,7 +1,7 @@
 Dockercon Hackathon 2014 -- Team "Automation Domination"
 
 Team members:
-* Nikhil Vaze @therealnikhil
+* Nikhil Vaze `@therealnikhil`
 * Siddhartha Gupta @Siddhartha_90
 * Tanay Nagjee @tanayciousd
 
