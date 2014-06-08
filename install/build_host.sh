@@ -28,9 +28,6 @@ fi
 # Update
 apt-get -y update
 
-# Install 32-bit compatibility libraries
-apt-get -y install ia32-libs
-
 # Install Jenkins
 wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
 echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list
@@ -39,12 +36,6 @@ apt-get -y install jenkins
 
 # Install git
 apt-get -y install git
-
-# Install ElectricCommander agent
-/opt/ElectricCommander-* --mode silent \
---installAgent \
---unixAgentUser jenkins \
---unixAgentGroup jenkins
 
 # Unpack everything
 cd /usr/local
