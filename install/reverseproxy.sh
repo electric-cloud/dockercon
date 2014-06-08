@@ -2,11 +2,11 @@
 
 sudo apt-get install curl -y
 sudo apt-get install git -y
+sudo apt-get install mercurial make binutils bison gcc build-essential -y
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
 source /home/vagrant/.gvm/scripts/gvm
-sudo apt-get install mercurial -y
-sudo apt-get install bison -y
-sudo apt-get install make -y
+
 
 # Install GO
 gvm install go1.2
@@ -32,3 +32,19 @@ git clone https://github.com/coreos/etcdctl.git
 cd etcdctl
 ./build 
 sudo cp bin/etcdctl /usr/local/bin/etcdctl
+
+# Start the etcd server as a docker container
+docker run -d -p 4001:4001 -p 7001:7001 coreos/etcd
+
+# Make directories for confd
+sudo mkdir -p /etc/confd/conf.d
+sudo mkdir -p /etc/confd/templates
+
+touch /etc/confd/templates/ecdemo-nginx.tmpl
+touch /etc/confd/conf.d/ecdemo-nginx.toml
+
+
+# Set a key, value in etcdctl
+# etcdctl set ecdemo/upstream 8080
+
+
