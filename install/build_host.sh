@@ -34,8 +34,11 @@ echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenk
 apt-get -y update
 apt-get -y install jenkins
 
-# Install git
+# Install Git
 apt-get -y install git
+
+# Install ReviewBoard CLI tools
+apt-get -y install python-rbtools
 
 # Unpack everything
 cd /usr/local
