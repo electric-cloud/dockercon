@@ -1,8 +1,25 @@
 #!/bin/bash
 
 if [[ $EUID -ne 0 ]]; then
-   echo "You must run this script as root." 1>&2
-   exit 100
+    echo "You must run this script as root." 1>&2
+    exit 1
+fi
+
+ret=true
+getent passwd ec >/dev/null 2>&1 && ret=false
+if $ret; then
+    echo "The ec user does not exist."
+    exit 1
+fi
+
+if [[ ! -f /opt/ElectricCommander-5.0.1.73229 ]]; then
+    echo "/opt/ElectricCommander-5.0.1.73229 not found!"
+    exit 1
+fi
+
+if [[ ! -f /opt/mysql-connector-java.jar ]]; then
+    echo "/opt/mysql-connector-java.jar not found!"
+    exit 1
 fi
 
 if [ -z "$1" ] ; then
@@ -10,7 +27,6 @@ if [ -z "$1" ] ; then
 	exit 1
 fi
 
-BASEDIR=$(dirname $0)
 IP_ADDRESS=$1
 
 # Update
@@ -23,7 +39,7 @@ apt-get -y install ia32-libs
 apt-get -y install git
 
 # Install Commander without the built-in database
-$BASEDIR/ElectricCommander-* --mode silent \
+/opt/ElectricCommander-* --mode silent \
 --installServer \
 --installWeb \
 --installAgent \
@@ -47,7 +63,7 @@ sed -i.bak -e 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
 restart mysql
 
 # Copy the MySQL connector JAR
-cp $BASEDIR/mysql-connector-java.jar /opt/electriccloud/electriccommander/server/lib
+cp /opt/mysql-connector-java.jar /opt/electriccloud/electriccommander/server/lib
 
 # Configure Commander to talk to MySQL
 ectool setDatabaseConfiguration \
