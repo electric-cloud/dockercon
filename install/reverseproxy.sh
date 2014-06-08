@@ -11,3 +11,11 @@ sudo apt-get install make -y
 # Install GO
 gvm install go1.2
 gvm use go1.2
+
+
+# Install newer nginx
+sudo apt-get install python-software-properties -y
+sudo apt-get install software-properties-common -y
+sudo add-apt-repository ppa:nginx/stable -y
+sudo apt-get update -y
+sudo apt-get install nginx -y
