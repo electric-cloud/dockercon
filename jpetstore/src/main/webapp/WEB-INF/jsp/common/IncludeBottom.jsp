@@ -2,7 +2,7 @@
 
 <div id="Footer">
 
-<div id="PoweredBy">&nbsp<a href="www.electric-cloud.com">www.electric-cloud.com</a>
+<div id="PoweredBy">&nbspElectric Cloud: <a href="www.electric-cloud.com">www.electric-cloud.com</a>
 </div>
 
 <div id="Banner"><c:if test="${sessionScope.accountBean != null }">
