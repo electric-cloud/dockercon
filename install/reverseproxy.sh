@@ -35,3 +35,7 @@ sudo cp bin/etcdctl /usr/local/bin/etcdctl
 
 # Start the etcd server as a docker container
 docker run -d -p 4001:4001 -p 7001:7001 coreos/etcd
+
+# Make directories for confd
+sudo mkdir -p /etc/confd/conf.d
+sudo mkdir -p /etc/confd/templates
