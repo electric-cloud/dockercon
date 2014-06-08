@@ -1,0 +1,13 @@
+upstream myapp1 {
+  
+  server 127.0.0.1:{{.ecdemo_upstream}};
+}
+ 
+server {
+
+
+    server_name 199.204.218.122 192.204.218.122;
+    location / {
+        proxy_pass        http://myapp1;
+   }
+}
