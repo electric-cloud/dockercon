@@ -25,3 +25,10 @@ sudo apt-get install nginx -y
 wget -O confd_0.3.0_linux_amd64.tar.gz https://github.com/kelseyhightower/confd/releases/download/v0.3.0/confd_0.3.0_linux_amd64.tar.gz
 tar -zxvf confd_0.3.0_linux_amd64.tar.gz
 sudo mv confd /usr/local/bin/confd
+
+# Install etcdtl
+
+git clone https://github.com/coreos/etcdctl.git
+cd etcdctl
+./build 
+sudo cp bin/etcdctl /usr/local/bin/etcdctl
