@@ -1,4 +1,4 @@
-Dockercon Hackathon 2014 -- Team "Automation Domination"
+Dockercon Hackathon 2014 -- Team "Electric Cloud"
 
 Team members:
 * Nikhil Vaze `@therealnikhil`
