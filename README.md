@@ -1,9 +1,9 @@
-Dockercon Hackathon 2014 -- Team "Automation Domination"
+*Dockercon Hackathon 2014 -- Team "Automation Domination"*
 
 Team members:
 * Nikhil Vaze `@therealnikhil`
-* Siddhartha Gupta @Siddhartha_90
-* Tanay Nagjee @tanayciousd
+* Siddhartha Gupta `@Siddhartha_90`
+* Tanay Nagjee `@tanayciousd`
 
 docker - Contains the base Jetty Docker container to which web applications are published.
 install - Installation scripts to set up Docker, Jenkins, ElectricCommander, Nginx.
