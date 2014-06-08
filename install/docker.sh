@@ -1,3 +1,10 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+   echo "You must run this script as root." 1>&2
+   exit 100
+fi
+
 apt-get update
 ntpdate -u pool.ntp.org
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
